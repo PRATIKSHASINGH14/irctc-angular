@@ -1,0 +1,68 @@
+<app-navbar></app-navbar>
+<app-footer></app-footer>
+<div class="banner">
+  <div class="container mt-5">
+    <form #homeForm="ngForm">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <form>
+            <img
+              src="https://www.irctc.co.in/nget/assets/images/logo_top_eng.jpg"
+            />
+            <div class="mb-3">
+              <label for="boarding">Boarding</label>
+              <input
+                type="text"
+                class="form-control"
+                name="boarding"
+                required
+                minlength="3"
+                [(ngModel)]="formData.boarding"
+                #boarding="ngModel"
+              />
+              <small class="text-danger" *ngIf="!boarding.valid"
+                >Required</small
+              >
+            </div>
+            <div class="mb-3">
+              <label for="destination">Destination</label>
+              <input
+                type="text"
+                class="form-control"
+                name="Destination"
+                required
+                minlength="3"
+                [(ngModel)]="formData.destination"
+                #destination="ngModel"
+              />
+              <small class="text-danger" *ngIf="!destination.valid"
+                >Required</small
+              >
+            </div>
+            <div class="mb-3">
+              <label for="date">DD/MM/YYYY*</label>
+              <input
+                type="date"
+                class="form-control"
+                name="date"
+                required
+                [(ngModel)]="formData.date"
+                #date="ngModel"
+              />
+              <small class="text-danger" *ngIf="!date.valid">Required</small>
+            </div>
+
+            <button
+              type="submit"
+              (click)="homeForm.valid && search()"
+              class="btn btn-primary"
+              [disabled]="!homeForm.valid"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

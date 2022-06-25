@@ -1,0 +1,156 @@
+<div class="container-mt-5">
+  <form (ngSubmit)="addTrain()" #createForm="ngForm">
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <form #createForm="ngForm">
+          <h1>{{ title }}</h1>
+          <div class="mb-3">
+            <label for="id">Id</label>
+            <input
+              type="number"
+              class="form-control"
+              name="id"
+              required
+              minlength="6"
+              [(ngModel)]="train.id"
+              #id="ngModel"
+            />
+            <small class="text-danger" *ngIf="!id"
+              >Required</small
+            >
+          </div>
+          <div class="mb-3">
+            <label for="trainName">Train Name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="trainName"
+              required
+              minlength="6"
+              [(ngModel)]="train.trainName"
+              #trainName="ngModel"
+            />
+            <small class="text-danger" *ngIf="!trainName.valid">Required</small>
+          </div>
+          <div class="mb-3">
+            <label for="trainNumber">Train Number</label>
+            <input
+              type="text"
+              class="form-control"
+              name="trainNumber"
+              required
+              minlength="6"
+              [(ngModel)]="train.trainNumber"
+              #trainNumber="ngModel"
+            />
+            <small class="text-danger" *ngIf="!trainNumber.valid"
+              >Required</small
+            >
+          </div>
+          <div class="mb-3">
+            <label for="boardingPoint">Boarding Point</label>
+            <input
+              type="text"
+              class="form-control"
+              name="boardingPoint"
+              required
+              minlength="6"
+              [(ngModel)]="train.boardingPoint"
+              #boardingPoint="ngModel"
+            />
+            <small class="text-danger" *ngIf="!boardingPoint.valid"
+              >Required</small
+            >
+          </div>
+          <div class="mb-3">
+            <label for="destinationPoint">Destination Point</label>
+            <input
+              type="text"
+              class="form-control"
+              name="destinationPoint"
+              required
+              minlength="6"
+              [(ngModel)]="train.destinationPoint"
+              #destinationPoint="ngModel"
+            />
+            <small class="text-danger" *ngIf="!destinationPoint.valid"
+              >Required</small
+            >
+          </div>
+          <div class="mb-3">
+            <label for="boardingTime">Boarding Time</label>
+            <input
+              type="text"
+              class="form-control"
+              name="boardingTime"
+              required
+              minlength="6"
+              [(ngModel)]="train.boardingTime"
+              #boardingTime="ngModel"
+            />
+            <small class="text-danger" *ngIf="!boardingTime.valid"
+              >Required</small
+            >
+          </div>
+          <div class="mb-3">
+            <label for="destinationTime">Destination Time</label>
+            <input
+              type="time"
+              class="form-control"
+              name="destinationTime"
+              required
+              minlength="6"
+              [(ngModel)]="train.destinationTime"
+              #destinationTime="ngModel"
+            />
+            <small class="text-danger" *ngIf="!destinationTime.valid"
+              >Required</small
+            >
+          </div>
+          <div class="mb-3">
+            <label for="numberOfSeats">Number of Seats</label>
+            <input
+              type="number"
+              class="form-control"
+              name="numberOfSeats"
+              required
+              [(ngModel)]="train.numberOfSeats"
+              #numberOfSeats="ngModel"
+            />
+            <small class="text-danger" *ngIf="!numberOfSeats.valid"
+              >Required</small
+            >
+          </div>
+          <div class="mb-3">
+            <label for="numberOfTickets">Number Of Tickets</label>
+            <input
+              type="number"
+              class="form-control"
+              name="numberOfTickets"
+              required minimum="1"
+              [(ngModel)]="train.numberOfTickets"
+              #numberOfTickets="ngModel"
+            />
+            <small class="text-danger" *ngIf="!numberOfTickets"
+              >Required</small
+            >
+          </div>
+          <div class="mb-3">
+            <label for="price">Price</label>
+            <input
+              type="number"
+              class="form-control"
+              name="price"
+              required
+              minimum="100"
+              [(ngModel)]="train.price"
+              #price="ngModel"
+            />
+            <small class="text-danger" *ngIf="!price.valid">Required</small>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </form>
+</div>

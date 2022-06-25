@@ -1,0 +1,44 @@
+
+<div class="container">
+  <form
+    (ngSubmit)="click()"
+    #paymentForm="ngForm"
+  >
+    <h4 class="my-5">{{ title }}</h4>
+    <div class="row justify-content-center">
+      <div class="col-11">
+        <div class="card">
+          <div class="card-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-8">
+                  <p>Train Name</p>
+                  <h5 class="card-title">Shatabdi Express</h5>
+                  <p>Train Number</p>
+                  <h5 class="card-title">123456</h5>
+                  <p>Boarding Point</p>
+                  <h5 class="card-title">Bangalore</h5>
+                  <p>Destination Point</p>
+                  <h5 class="card-title">Delhi</h5>
+                  <p>Number Of Tickets</p>
+                  <h5 class="card-title">04</h5>
+                  <p>Date</p>
+                  <h5 class="card-title">18/06/2022</h5>
+                  <p>Price/Ticket</p>
+                  <h5 class="card-title">Rs. 500</h5>
+                  <p>Total Price</p>
+                  <h5 class="card-title">Rs. 2000</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-6 mb-3">
+        <button type="submit" class="btn btn-primary">Pay Now</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,75 @@
+<app-navbar></app-navbar>
+<div class="container mt-5">
+  <form
+    (ngSubmit)="isValid() && registerForm.valid && register()"
+    #registerForm="ngForm"
+  >
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <form>
+          <h1>{{ title }}</h1>
+          <div class="mb-3">
+            <label for="email">Email address</label>
+            <input
+              type="text"
+              class="form-control"
+              name="email"
+              required
+              minlength="8"
+              [(ngModel)]="formData.email"
+              #email="ngModel"
+            />
+            <small class="text-danger" *ngIf="!email.valid"
+              >Enter a valid email</small
+            >
+          </div>
+          <div class="mb-3">
+            <label for="Password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              required
+              minlength="8"
+              [(ngModel)]="formData.password"
+              #password="ngModel"
+            />
+            <small class="text-danger" *ngIf="!password.valid"
+              >Enter a more secure password</small
+            >
+          </div>
+          <div class="mb-3">
+            <label for="ConfirmPassword">Confirm Password</label>
+            <input
+              type="confirmPassword"
+              class="form-control"
+              name="confirmPassword"
+              required
+              minLength="8"
+              [(ngModel)]="formData.confirmPassword"
+              #confirmPassword="ngModel"
+            />
+            <small class="text-danger" *ngIf="!confirmPassword.valid"
+              >Invalid Password</small
+            >
+            <small class="text-danger" *ngIf="errorMessage.length > 0">{{
+              errorMessage
+            }}</small>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-6 mb-3">
+        <a routerLink="/login" class="text-decoration-none text-dark"
+          >Already registered?</a
+        >
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-6 mb-3">
+        <button type="submit" class="btn btn-primary">Register</button>
+      </div>
+    </div>
+  </form>
+</div>

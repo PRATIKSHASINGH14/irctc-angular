@@ -1,0 +1,20 @@
+.banner {
+    position: relative;
+    display: block;
+}
+
+.logo {
+    left: 40%;
+    top: 12%;
+    position: absolute;
+}
+
+.btn{
+    border-radius: 6px;
+    background: #fb792b;
+    color: #fff;
+    border-color: #fb792b;
+    font-size: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
